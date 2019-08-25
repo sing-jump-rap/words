@@ -1,0 +1,135 @@
+﻿/*css初始化*/
+/*1.清除默认样式*/
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+input {
+	border: 0;
+	outline: 0;
+}
+img {
+	vertical-align: middle;
+	/*清除ie6图片默认边框*/
+	border: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+em, i {
+	font-style: normal;
+}
+/*2.常用的样式*/
+body {
+	font: 12px arial, 'microsoft yahei';
+	color: #666;
+}
+a {
+	color: #666;
+}
+a:hover {
+	color: #c81623;
+}
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix:after {
+	content: '';
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+.red {
+	color: #c81623;
+}
+.f12 {
+	font-size: 12px;
+}
+.f14 {
+	font-size: 14px;
+}
+.f16 {
+	font-size: 16px;
+}
+.f18 {
+	font-size: 18px;
+}
+.f20 {
+	font-size: 20px;
+}
+.tc {
+	text-align: center;
+}
+/*字体图标*/
+/*使用步骤
+1. 下载字体图标
+2. 将字体图标文件拷贝到fonts
+3. 找到说明文档,将@font-face 拷贝到css文件里边, 注意路径
+4. 定义一个类名,使用字体图标字体
+5. 在标签里边拷贝字体图标对应的编码, 调用iconfont类*/
+/*定义字体图标*/
+@font-face {
+	/*定义字体图标的名称*/
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/iconfont.woff2') format('woff2'),
+      url('../fonts/iconfont.woff') format('woff'),
+      url('../fonts/iconfont.ttf') format('truetype'),
+      url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+	/*使用字体图标的字体*/
+	font-family: 'iconfont';
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+移动端开发常用样式：
+1，meta标签配置视口
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+2，特殊样式
+ a {
+      /*点击高亮我们需要清除清除  设置为transparent 完成透明*/
+      -webkit-tap-highlight-color: transparent;
+    }
+    button,input {
+       /*在移动端浏览器默认的外观在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+      -webkit-appearance: none;
+    }
+    
+    img,a {
+        /*禁用长按页面时的弹出菜单*/
+       -webkit-touch-callout: none; 
+    }
+     /*CSS3盒子模型*/
+         box-sizing: border-box;
+    /*传统盒子模型*/
+          box-sizing: content-box;
+3，常用的flex布局方式
+ .hotfuben a {
+    flex: 1;
+    text-align: center;
+        /* 定义弹性盒子 */
+         display: flex;
+        /* 将主轴设置为y轴 */
+         flex-direction: column;
+        /* 侧轴子单行元素居中排列 */
+         align-items: center;
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
